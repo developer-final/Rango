@@ -6,7 +6,7 @@
 [![Backtest](https://img.shields.io/badge/Strategy%20Tester-100%25%20Free%20Simulation-brightgreen.svg)]()
 [![Telegram Support](https://img.shields.io/badge/Telegram-@trading__world__support-blue.svg)](https://t.me/trading_world_support)
 
-> **Rango EA** is an advanced, institutional-grade automated trading system for **MetaTrader 5 (MT5)**. It replaces traditional "blind" Dollar-Cost Averaging (DCA) and dangerous Martingale grids with an intelligent **Regime-Dependent Permission Engine**, **Trend Danger Scoring (TDS)**, and **Momentum-Adaptive Grid Stretching**.
+> **Rango EA** is an advanced, institutional-grade quantitative trading system for **MetaTrader 5 (MT5)**. It replaces traditional "blind" Dollar-Cost Averaging (DCA) and dangerous Martingale grids with an intelligent **Regime-Dependent Permission Engine**, **Trend Danger Scoring (TDS)**, and **Statistical Exhaustion Scoring (ES)**.
 
 ---
 
@@ -36,7 +36,7 @@ Traditional grid and Martingale systems inevitably fail during prolonged, one-di
 Instead of blindly opening orders at fixed pip intervals, Rango incorporates a **Multi-Factor Quantitative Permission Gate**:
 1. It continuously monitors market regime persistence using **Hurst Exponent**, **ADX**, and **ATR Expansion Ratios**.
 2. If the market is trending strongly against you, **DCA order expansion is strictly blocked**.
-3. Recovery orders are only permitted when quantitative metrics confirm that adverse trend momentum has decayed and **mean-reversion probability is mathematically elevated**.
+3. Signals and entries are only permitted when quantitative metrics confirm that adverse trend momentum has decayed and **mean-reversion probability is mathematically elevated**.
 
 ```
                         ┌─────────────────────────────────┐
@@ -62,7 +62,7 @@ Instead of blindly opening orders at fixed pip intervals, Rango incorporates a *
         ▼                                ▼                                ▼
 ┌───────────────┐                ┌───────────────┐                ┌───────────────┐
 │  DCA BLOCKED  │                │   DCA WATCH   │                │   DCA READY   │
-│ Hold Expansion│                │ Await Trigger │                │ Execute Level │
+│ Hold Expansion│                │ Await Trigger │                │ Execute Signal│
 └───────────────┘                └───────────────┘                └───────────────┘
 ```
 
@@ -74,9 +74,9 @@ Instead of blindly opening orders at fixed pip intervals, Rango incorporates a *
 | :--- | :--- | :--- |
 | **Averaging Trigger** | Fixed pip distances or timer | **Quantitative DCA Readiness Score (DRS)** |
 | **Trending Protection** | None (keeps averaging into crash) | **Anti-Expansion Gate & Trend Danger Block** |
-| **Grid Spacing** | Static / Fixed | **Adaptive Dynamic Stretching (Up to 300%)** |
+| **Timing Precision** | Blind / Fixed Pips | **Quantitative Exhaustion & Reversal Confirmation** |
 | **Directional Gate** | Opens dual Buy/Sell blindly | **Directional Isolation (No counter-trend clutter)** |
-| **Risk Boundary** | Unbounded risk | **Capped Stop Loss & Survival Mode Defense** |
+| **Risk Boundary** | Unbounded risk | **Strict Risk Management & ATR Stop Protection** |
 | **Visual Telemetry** | Basic or none | **Real-Time HUD Dashboard & Smart Signal Arrows** |
 | **Strategy Tester** | Often hidden or limited | **100% Free, Unrestricted Backtesting** |
 
@@ -88,28 +88,27 @@ Instead of blindly opening orders at fixed pip intervals, Rango incorporates a *
 - **Trend Danger Score (TDS: 0–100)**: Evaluates trend strength, Hurst persistence, and volatility acceleration. If $TDS > 65$, new DCA entries are frozen.
 - **Exhaustion Score (ES: 0–100)**: Quantifies statistical stretch from the 200 EMA, RSI overbought/oversold extremes, candle body deceleration, and rejection pinbars.
 - **Anti-Expansion Gate**: Instantly blocks averaging if short-term ATR surges violently over long-term ATR ($ATR_5 / ATR_{30} > 1.35$) during news spikes or breakout cascades.
-- **Emergency DCA Kill Switch**: Automatically halts grid expansions if adverse market conditions exceed critical safety limits ($TDS > 85$).
+- **Emergency DCA Kill Switch**: Automatically halts averaging if adverse market conditions exceed critical safety limits ($TDS > 85$).
 
 ### 2. 🎯 Directional DCA Isolation
 - When market is in a confirmed **Uptrend**, Buy DCA is blocked and only Sell DCA mean-reversion is evaluated at exhaustion.
 - When market is in a confirmed **Downtrend**, Sell DCA is blocked and only Buy DCA is evaluated at bottom exhaustion.
 - Opposing dual signals are only allowed in **Sideways / Range-bound** conditions.
 
-### 3. 📈 M5 Adaptive Recovery Grid (`CAdaptiveRecovery`)
-- **Momentum-Based Spacing Stretching**: Grid levels automatically widen when strong adverse momentum candles appear.
-- **Post-Fill SL Stretching**: Stop Loss distances only stretch after a pending level is executed, keeping initial risk locked.
-- **Risk Budget Allocation**: Lot sizing dynamically calculates required recovery volume while strictly enforcing the base volume cap to prevent exponential lot explosion.
-- **Survival Mode**: If risk budget reaches maximum capacity, all further expansions halt to protect equity.
+### 3. 🛡️ Professional Risk Management & Flexible Sizing
+- **Multi-Mode Risk Sizing**: Supports calculation by Volume (Lot Size), Fixed Currency Amount ($), or Account Risk Percentage (%).
+- **Automated SL/TP Projection**: Dynamic distance calculations based on higher-timeframe ATR and customizable Risk:Reward ratios.
+- **Execution Safeguards**: Spread filters, minimum broker stops distance validation, and margin requirement verification prior to execution.
 
 ### 4. 📊 Professional On-Chart Dashboard & Telemetry
 - Clean, high-contrast visual display showing:
   - Current Market Regime & Volatility state.
   - Live **TDS** (Trend Danger Score) and **DRS** (DCA Readiness Score).
-  - Win/Loss statistics, current recovery stage, and total committed risk in currency.
+  - Win/Loss statistics, trend pullback state, and live profit metrics.
 
-### 5. 🏹 Smart Signal Arrows & Telegram Notifications
+### 5. 🏹 Smart Signal Arrows & Push Notifications
 - Clean arrow markers rendered only on **state transitions** with customizable cooldowns and auto-expiration cleanup (no chart clutter).
-- Full **Telegram Bot Integration**: Delivers real-time trade signals, DCA readiness alerts, and chart screenshots directly to your private channel or group.
+- **Direct MT5 Mobile Push Notifications**: Delivers real-time trade signals and DCA readiness alerts directly to your phone via MetaQuotes ID.
 
 ### 6. 🧪 Unrestricted MT5 Strategy Tester
 - Backtest, stress test, and optimize Rango on historical data across any broker, instrument, and timeframe with **zero restrictions**.
@@ -188,7 +187,7 @@ Rango EA supports instant push notifications delivered directly to the **MetaTra
 4. ⚠️ **IMPORTANT (Anti-Spam Configuration)**:
    * **UNCHECK** ❌ **Notifications from the local terminal**
    * **UNCHECK** ❌ **Notifications from the trade server**
-   > 💡 **Why uncheck these?** If checked, the MT5 broker trade server will send a push notification for every single micro-action (every pending order placed, modified, or closed by the EA grid). Unchecking these two options ensures you **only** receive Rango's clean, high-priority analytical signals (Trend & DCA alerts) without broker spam!
+   > 💡 **Why uncheck these?** If checked, the MT5 broker trade server will send a push notification for every single micro-action (every pending order placed, modified, or closed on your account). Unchecking these two options ensures you **only** receive Rango's clean, high-priority analytical signals (Trend & DCA alerts) without broker spam!
 5. Enter your **MetaQuotes ID** in the **MetaQuotes ID** field (multiple IDs can be separated by commas).
 6. Click the **Test** button. You should immediately receive a test notification on your mobile phone!
 7. Click **OK** to save the settings.
@@ -211,7 +210,6 @@ In the EA's Input Settings:
 | `InputMagicNumber` | `0` | Unique EA identifier (`0` = Auto-allocated based on symbol hash). |
 | `Language` | `LANG_ENGLISH` | Dashboard & alert language (`LANG_ENGLISH` or `LANG_VIETNAMESE`). |
 | `InpShowDashboard` | `true` | Display the real-time HUD dashboard on chart. |
-| `AutoTrading` | `false` | Enable automated order execution (`true` = Auto, `false` = Signals only). |
 | `SinglePositionMode` | `true` | Restrict EA to one active strategy cycle at a time. |
 | `ATR_Multiplier` | `1.0` | Global ATR multiplier for dynamic distance calculations. |
 | `MaxSpreadPoints` | `0` | Max allowed spread in points (`0` = Disabled). |
@@ -234,17 +232,6 @@ In the EA's Input Settings:
 | `InpEnableDCAKillSwitch` | `true` | Emergency stop freezing new orders if $TDS > 85$. |
 | `InpShowDCAArrows` | `true` | Plot visual DCA authorization arrows on chart. |
 | `InpDCAArrowCooldownBars` | `3` | Minimum bar spacing between consecutive DCA arrows. |
-
-### Recovery Grid Settings *(Dev/Backtest mode; Locked as global constants in Release Mode)*
-| Parameter | Default | Description |
-| :--- | :--- | :--- |
-| `InpEnableRecovery` | `false` | Enable multi-level adaptive recovery grid. |
-| `InpRecoveryDivision` | `6` | Maximum number of recovery grid levels. |
-| `RecoveryMultiplier` | `1.25` | Lot multiplier across consecutive recovery orders. |
-| `RecoveryTarget` | `3.00` | Basket Take Profit target (% of account balance). |
-| `RecoveryDrawdown` | `10.0` | Maximum allowable drawdown limit (% of balance). |
-| `EnableBreakeven` | `true` | Move basket to Breakeven when profit trigger is reached. |
-| `EnableAdaptiveRecovery` | `true` | Enable dynamic momentum-based grid level stretching. |
 
 ### Push Notifications & Alerts
 | Parameter | Default | Description |
@@ -301,7 +288,7 @@ Alternatively, the serial is printed directly in the MT5 <b>Experts Log tab</b>.
 <br>
 Find your <b>MetaQuotes ID</b> inside the MT5 Mobile app (Android or iOS), enter it in desktop MT5 under <code>Tools ➔ Options ➔ Notifications</code>, and check <b>"Enable Push Notifications"</b>. 
 <br><br>
-⚠️ <b>Anti-Spam Tip:</b> Make sure to <b>UNCHECK</b> <i>"Notifications from the local terminal"</i> and <i>"Notifications from the trade server"</i> so you only receive Rango's high-value strategy signals instead of an alert for every single grid order modification!
+⚠️ <b>Anti-Spam Tip:</b> Make sure to <b>UNCHECK</b> <i>"Notifications from the local terminal"</i> and <i>"Notifications from the trade server"</i> so you only receive Rango's high-value strategy signals instead of an alert for every single trade transaction!
 </details>
 
 ---
