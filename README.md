@@ -18,6 +18,7 @@
 - [System Architecture & Quantitative Models](#-system-architecture--quantitative-models)
 - [Quick Start & Installation Guide](#-quick-start--installation-guide)
 - [How to Activate (Free Backtesting & Live Setup)](#-how-to-activate-free-backtesting--live-setup)
+- [Mobile Push Notifications Setup (MT5 App & MetaQuotes ID)](#-mobile-push-notifications-setup-mt5-app--metaquotes-id)
 - [Input Parameters Reference](#-input-parameters-reference)
 - [Recommended Trading Setup](#-recommended-trading-setup)
 - [Frequently Asked Questions (FAQ)](#-frequently-asked-questions-faq)
@@ -172,6 +173,35 @@ When you first attach Rango to a live or demo chart:
 
 ---
 
+## 📲 Mobile Push Notifications Setup (MT5 App & MetaQuotes ID)
+
+Rango EA supports instant push notifications delivered directly to the **MetaTrader 5 Mobile App** (iOS & Android) using the native MQL5 `SendNotification` engine. This ensures ultra-fast, direct alerts on your phone without requiring WebRequest configurations or Telegram bots.
+
+### Step 1: Find Your MetaQuotes ID on Mobile
+* **Android**: Open the MetaTrader 5 app ➔ Tap the Menu (☰) ➔ Select **Messages** (or **Settings** ➔ **Messages**) ➔ Note down your **MetaQuotes ID** (an 8-character alphanumeric string, e.g., `1A2B3C4D`).
+* **iOS (iPhone/iPad)**: Open the MetaTrader 5 app ➔ Go to **Settings** ➔ Select **Chat and Messages** ➔ Find your **My MetaQuotes ID** at the bottom of the screen.
+
+### Step 2: Configure Push Notifications in Desktop MT5
+1. On your desktop MT5 terminal, open `Tools` ➔ `Options` (or press `Ctrl + O`).
+2. Navigate to the **Notifications** tab.
+3. Check ✅ **Enable Push Notifications**.
+4. ⚠️ **IMPORTANT (Anti-Spam Configuration)**:
+   * **UNCHECK** ❌ **Notifications from the local terminal**
+   * **UNCHECK** ❌ **Notifications from the trade server**
+   > 💡 **Why uncheck these?** If checked, the MT5 broker trade server will send a push notification for every single micro-action (every pending order placed, modified, or closed by the EA grid). Unchecking these two options ensures you **only** receive Rango's clean, high-priority analytical signals (Trend & DCA alerts) without broker spam!
+5. Enter your **MetaQuotes ID** in the **MetaQuotes ID** field (multiple IDs can be separated by commas).
+6. Click the **Test** button. You should immediately receive a test notification on your mobile phone!
+7. Click **OK** to save the settings.
+
+### Step 3: Configure Notification Settings in Rango EA
+In the EA's Input Settings:
+* `EnableNotifications = true` — Enable push notification alerts.
+* `InpNotifyDCASignal = true` — Receive real-time push alerts when quantitative metrics trigger a **DCA READY** state.
+* `InpNotifyTrendSignal = true` — Receive push alerts when a confirmed **Trend Pullback Signal** occurs.
+* `InpMetaQuotesID = "..."` — Enter your MetaQuotes ID (Optional reference / terminal linkage).
+
+---
+
 ## ⚙️ Input Parameters Reference
 
 ### General Settings
@@ -205,7 +235,7 @@ When you first attach Rango to a live or demo chart:
 | `InpShowDCAArrows` | `true` | Plot visual DCA authorization arrows on chart. |
 | `InpDCAArrowCooldownBars` | `3` | Minimum bar spacing between consecutive DCA arrows. |
 
-### Recovery Grid Settings
+### Recovery Grid Settings *(Dev/Backtest mode; Locked as global constants in Release Mode)*
 | Parameter | Default | Description |
 | :--- | :--- | :--- |
 | `InpEnableRecovery` | `false` | Enable multi-level adaptive recovery grid. |
@@ -216,13 +246,13 @@ When you first attach Rango to a live or demo chart:
 | `EnableBreakeven` | `true` | Move basket to Breakeven when profit trigger is reached. |
 | `EnableAdaptiveRecovery` | `true` | Enable dynamic momentum-based grid level stretching. |
 
-### Telegram & Push Alerts
+### Push Notifications & Alerts
 | Parameter | Default | Description |
 | :--- | :--- | :--- |
-| `EnableNotifications` | `true` | Master toggle for Telegram notifications. |
-| `InpNotifyDCASignal` | `true` | Send Telegram alert when DCA state transitions to READY. |
-| `Telegram_Token` | `""` | Telegram Bot Token from `@BotFather`. |
-| `Telegram_ChartID` | `""` | Telegram Chat ID or Channel ID. |
+| `EnableNotifications` | `true` | Master toggle for notifications. |
+| `InpNotifyDCASignal` | `true` | Send mobile push alert when DCA state transitions to READY. |
+| `InpNotifyTrendSignal` | `false` | Send mobile push alert on confirmed trend pullback signals. |
+| `InpMetaQuotesID` | `""` | MetaQuotes ID for direct push delivery to MT5 Mobile app. |
 
 ---
 
@@ -264,6 +294,14 @@ Alternatively, the serial is printed directly in the MT5 <b>Experts Log tab</b>.
 <summary><b>Q4: Does Rango work on a VPS?</b></summary>
 <br>
 <b>Yes!</b> Rango is optimized for low CPU usage and works seamlessly on any Windows VPS (24/7 continuous operation recommended).
+</details>
+
+<details>
+<summary><b>Q5: How do I receive push alerts on my phone without being spammed?</b></summary>
+<br>
+Find your <b>MetaQuotes ID</b> inside the MT5 Mobile app (Android or iOS), enter it in desktop MT5 under <code>Tools ➔ Options ➔ Notifications</code>, and check <b>"Enable Push Notifications"</b>. 
+<br><br>
+⚠️ <b>Anti-Spam Tip:</b> Make sure to <b>UNCHECK</b> <i>"Notifications from the local terminal"</i> and <i>"Notifications from the trade server"</i> so you only receive Rango's high-value strategy signals instead of an alert for every single grid order modification!
 </details>
 
 ---
