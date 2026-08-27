@@ -247,9 +247,9 @@ In the EA's Input Settings:
 
 | Asset Class | Recommended Symbols | Optimal Timeframe | Minimum Balance (0.01 lot) | Recommended Leverage |
 | :--- | :--- | :--- | :--- | :--- |
-| **Precious Metals** | `XAUUSD` (Gold) | `M5` / `M15` | $1,000 – $2,000 | 1:100 to 1:500 |
-| **Major Forex** | `EURUSD`, `GBPUSD`, `USDJPY` | `M5` / `M15` | $500 – $1,000 | 1:100 to 1:500 |
-| **Crypto** | `BTCUSD`, `ETHUSD` | `M15` / `H1` | $2,000+ | 1:50 to 1:200 |
+| **Precious Metals** | `XAUUSD` (Gold) | `M1` / `M5` | $10,000+ | 1:2000 |
+| **Major Forex** | `EURUSD`, `GBPUSD`, `USDJPY` | `M5` / `M15` | $10,000+ | 1:2000 |
+| **Crypto** | `BTCUSD`, `ETHUSD` | `M5` / `M15` | $10,000+ | 1:2000 |
 
 > 💡 **Pro-Tip**: For maximum stability during high-impact news events (CPI, NFP, FOMC), ensure `InpEnableAntiExpansion = true` and `EnableNewsAlert = true`.
 
