@@ -27,6 +27,22 @@
 
 ---
 
+<div align="center">
+
+## 🎬 Video Tutorials
+
+<a href="https://www.youtube.com/playlist?list=PLHwVdyPeKoh0">
+  <img src="https://img.youtube.com/vi/a6Jrm4S1b4A/maxresdefault.jpg"
+       alt="Watch the video tutorial playlist"
+       width="800">
+</a>
+
+<br>
+
+**▶️ [Watch the full playlist on YouTube](https://www.youtube.com/playlist?list=PLHwVdyPeKoh0)**
+
+</div>
+
 ## 💡 Tổng Quan
 
 Các hệ thống lưới (grid) và Martingale truyền thống tất yếu sẽ thất bại khi gặp các đợt bùng nổ xu hướng một chiều kéo dài. Chúng nhồi lệnh một cách mù quáng vào động lượng bất lợi mạnh cho đến khi tài khoản bị Margin Call (cháy tài khoản).
