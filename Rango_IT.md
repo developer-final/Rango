@@ -27,6 +27,22 @@
 
 ---
 
+<div align="center">
+
+## 🎬 Video Tutorials
+
+<a href="https://www.youtube.com/playlist?list=PLHwVdyPeKoh0">
+  <img src="https://img.youtube.com/vi/a6Jrm4S1b4A/maxresdefault.jpg"
+       alt="Watch the video tutorial playlist"
+       width="800">
+</a>
+
+<br>
+
+**▶️ [Watch the full playlist on YouTube](https://www.youtube.com/playlist?list=PLHwVdyPeKoh0)**
+
+</div>
+
 ## 💡 Panoramica
 
 I sistemi a griglia e Martingala tradizionali falliscono inevitabilmente durante prolungate e forti esplosioni di trend unidirezionali. Aprono ordini alla cieca contro un forte momentum avverso fino al raggiungimento del Margin Call.
