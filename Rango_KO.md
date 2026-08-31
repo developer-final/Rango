@@ -27,6 +27,22 @@
 
 ---
 
+<div align="center">
+
+## 🎬 Video Tutorials
+
+<a href="https://www.youtube.com/playlist?list=PLHwVdyPeKoh0">
+  <img src="https://img.youtube.com/vi/a6Jrm4S1b4A/maxresdefault.jpg"
+       alt="Watch the video tutorial playlist"
+       width="800">
+</a>
+
+<br>
+
+**▶️ [Watch the full playlist on YouTube](https://www.youtube.com/playlist?list=PLHwVdyPeKoh0)**
+
+</div>
+
 ## 💡 시스템 개요
 
 전통적인 그리드 및 마틴게일 시스템은 강력하고 지속적인 일방향 추세 폭발 시 필연적으로 계좌 청산(마진콜)으로 이어집니다. 반대 방향 모멘텀에 맹목적으로 주문을 중첩하기 때문입니다.
