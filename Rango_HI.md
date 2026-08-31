@@ -27,6 +27,22 @@
 
 ---
 
+<div align="center">
+
+## 🎬 Video Tutorials
+
+<a href="https://www.youtube.com/playlist?list=PLHwVdyPeKoh0">
+  <img src="https://img.youtube.com/vi/a6Jrm4S1b4A/maxresdefault.jpg"
+       alt="Watch the video tutorial playlist"
+       width="800">
+</a>
+
+<br>
+
+**▶️ [Watch the full playlist on YouTube](https://www.youtube.com/playlist?list=PLHwVdyPeKoh0)**
+
+</div>
+
 ## 💡 सिस्टम अवलोकन
 
 पारंपरिक ग्रिड और मार्टिंगेल सिस्टम लंबे समय तक चलने वाले एकतरफा ट्रेंड विस्फोटों के दौरान अनिवार्य रूप से विफल हो जाते हैं। वे प्रतिकूल गति के खिलाफ तब तक ऑर्डर जोड़ते रहते हैं जब तक खाते में मार्जिन कॉल न आ जाए।
