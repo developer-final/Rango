@@ -26,6 +26,13 @@
 - [Risk Disclaimer](#-risk-disclaimer)
 
 ---
+## 🎬 Video Tutorials
+
+<a href="https://www.youtube.com/playlist?list=PLHwVdyPeKoh0">
+  <img src="https://img.youtube.com/vi/a6Jrm4S1b4A/maxresdefault.jpg"
+       alt="Video Tutorials"
+       width="720">
+</a>
 
 ## 💡 Overview
 
@@ -154,8 +161,7 @@ Instead of blindly opening orders at fixed pip intervals, Rango incorporates a *
 
 Rango offers two operating tiers:
 
-### 1. 🧪 100% Free Strategy Tester (Simulations & Backtesting)
-- **Zero license key required.**
+### 1. 🧪 Strategy Tester (Simulations & Backtesting)
 - Open the MT5 Strategy Tester (`Ctrl + R`), select `Rango.ex5`, choose your symbol and date range, and click **Start**.
 - Backtest any historical period with complete feature access!
 
