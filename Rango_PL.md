@@ -27,6 +27,22 @@
 
 ---
 
+<div align="center">
+
+## 🎬 Video Tutorials
+
+<a href="https://www.youtube.com/playlist?list=PLHwVdyPeKoh0">
+  <img src="https://img.youtube.com/vi/a6Jrm4S1b4A/maxresdefault.jpg"
+       alt="Watch the video tutorial playlist"
+       width="800">
+</a>
+
+<br>
+
+**▶️ [Watch the full playlist on YouTube](https://www.youtube.com/playlist?list=PLHwVdyPeKoh0)**
+
+</div>
+
 ## 💡 Przegląd
 
 Tradycyjne systemy siatkowe (grid) oraz Martingale nieuchronnie zawodzą podczas długotrwałych, silnych jednokierunkowych eksplozji trendu. Ślepo dokładają pozycje pod silny impet przeciwko pozycji, aż konto otrzyma wezwanie do uzupełnienia depozytu (Margin Call).
