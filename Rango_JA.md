@@ -27,6 +27,22 @@
 
 ---
 
+<div align="center">
+
+## 🎬 Video Tutorials
+
+<a href="https://www.youtube.com/playlist?list=PLHwVdyPeKoh0">
+  <img src="https://img.youtube.com/vi/a6Jrm4S1b4A/maxresdefault.jpg"
+       alt="Watch the video tutorial playlist"
+       width="800">
+</a>
+
+<br>
+
+**▶️ [Watch the full playlist on YouTube](https://www.youtube.com/playlist?list=PLHwVdyPeKoh0)**
+
+</div>
+
 ## 💡 概要
 
 従来のグリッドやマーチンゲールシステムは、長引く強力な一方通行のトレンド相場で必然的に破綻します。逆方向の強いモメンタムに対して無分別にポジションを積み増し、最終的に強制ロスカット (Margin Call) を引き起こします。
