@@ -27,6 +27,22 @@
 
 ---
 
+<div align="center">
+
+## 🎬 Video Tutorials
+
+<a href="https://www.youtube.com/playlist?list=PLHwVdyPeKoh0">
+  <img src="https://img.youtube.com/vi/a6Jrm4S1b4A/maxresdefault.jpg"
+       alt="Watch the video tutorial playlist"
+       width="800">
+</a>
+
+<br>
+
+**▶️ [Watch the full playlist on YouTube](https://www.youtube.com/playlist?list=PLHwVdyPeKoh0)**
+
+</div>
+
 ## 💡 Descripción General
 
 Los sistemas de cuadrícula y Martingala convencionales fracasan inevitablemente durante explosiones de tendencia unidireccionales prolongadas. Acumulan órdenes ciegamente contra un fuerte impulso adverso hasta que la cuenta sufre una llamada de margen (Margin Call).
