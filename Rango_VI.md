@@ -170,8 +170,7 @@ Thay vì mở lệnh DCA theo các khoảng pip cố định, Rango tích hợp 
 
 Rango cung cấp 2 chế độ vận hành:
 
-### 1. 🧪 100% Miễn Phí Trên Strategy Tester (Backtest & Mô Phỏng)
-- **Không cần License Key.**
+### 1. 🧪 Strategy Tester (Backtest & Mô Phỏng)
 - Mở cửa sổ Strategy Tester trên MT5 (`Ctrl + R`), chọn `Rango.ex5`, chọn Symbol và khoảng thời gian, sau đó nhấn **Start**.
 - Tận hưởng trải nghiệm backtest đầy đủ toàn bộ tính năng!
 
