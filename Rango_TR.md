@@ -27,6 +27,22 @@
 
 ---
 
+<div align="center">
+
+## 🎬 Video Tutorials
+
+<a href="https://www.youtube.com/playlist?list=PLHwVdyPeKoh0">
+  <img src="https://img.youtube.com/vi/a6Jrm4S1b4A/maxresdefault.jpg"
+       alt="Watch the video tutorial playlist"
+       width="800">
+</a>
+
+<br>
+
+**▶️ [Watch the full playlist on YouTube](https://www.youtube.com/playlist?list=PLHwVdyPeKoh0)**
+
+</div>
+
 ## 💡 Genel Bakış
 
 Geleneksel ızgara (grid) ve Martingale sistemleri, uzun süreli ve güçlü tek yönlü trend patlamalarında kaçınılmaz olarak başarısız olur. Hesap teminat tamamlama çağrısı (Margin Call) alana kadar ters yöndeki güçlü momentuma körü körüne ek emirler yığarlar.
