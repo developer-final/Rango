@@ -27,6 +27,22 @@
 
 ---
 
+<div align="center">
+
+## 🎬 Video Tutorials
+
+<a href="https://www.youtube.com/playlist?list=PLHwVdyPeKoh0">
+  <img src="https://img.youtube.com/vi/a6Jrm4S1b4A/maxresdefault.jpg"
+       alt="Watch the video tutorial playlist"
+       width="800">
+</a>
+
+<br>
+
+**▶️ [Watch the full playlist on YouTube](https://www.youtube.com/playlist?list=PLHwVdyPeKoh0)**
+
+</div>
+
 ## 💡 系统概述
 
 传统的网格与马丁格尔系统在遭遇持久的单边单向强趋势时必然会走向爆仓。它们盲目地在强烈的反向动能中不断加仓，直到账户触发强制平仓（Margin Call）。
