@@ -134,7 +134,7 @@ Instead of blindly opening orders at fixed pip intervals, Rango incorporates a *
 ## 🛠️ Quick Start & Installation Guide
 
 ### Prerequisites
-- **Platform**: MetaTrader 5 (Build 3800 or newer recommended)
+- **Platform**: MetaTrader 5 (Build 6140 or newer recommended)
 - **OS**: Windows 10 / 11 or Windows Server (VPS)
 - **Account Type**: Hedging account recommended (standard or ECN with low spread)
 
